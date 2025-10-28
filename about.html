@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Shahid Electronic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 80px 20px;
+      max-width: 1300px;
+      margin: auto;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #4fc3f7;
+      animation: slideDown 1.5s ease-out;
+    }
+
+    .about-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+      animation: slideRight 1.5s ease-out;
+    }
+
+    .about-text p {
+      font-size: 1.15rem;
+      line-height: 2;
+      color: #d0e9ff;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #00e5ff;
+      font-weight: bold;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+      animation: slideLeft 1.5s ease-out;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #03a9f4;
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0288d1;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideRight {
+      from {transform: translateX(-80px); opacity: 0;}
+      to {transform: translateX(0); opacity: 1;}
+    }
+
+    @keyframes slideLeft {
+      from {transform: translateX(80px); opacity: 0;}
+      to {transform: translateX(0); opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About Shahid Electronic</h1>
+    <div class="about-box">
+      <div class="about-text">
+        <p>
+          Welcome to <span class="highlight">Shahid Electronic</span> — Pakistan’s most trusted name in electronic repair for the last <span class="highlight">25+ years</span>. From humble beginnings to becoming <span class="highlight">internet famous</span> for our exceptional service, we are known across Pakistan for our unmatched quality and fast repairs.
+        </p>
+
+        <p>
+          Our expert technicians specialize in the repair of <span class="highlight">LEDs, LCDs, Smart TVs, and Display Panels</span>. Whether it’s a cracked screen, power issue, or motherboard problem — we diagnose and repair it with precision using <span class="highlight">original parts</span> and advanced tools.
+        </p>
+
+        <p>
+          We also offer professional <span class="highlight">UPS repair and inverter services</span>. Power backup failure? No worries! We restore your systems to full working condition with complete testing and safety checks.
+        </p>
+
+        <p>
+          Our workshop is equipped with modern testing equipment, skilled staff, and thousands of satisfied clients. We believe in <span class="highlight">transparent pricing, fast turnaround, and long-lasting repair</span>— so you never have to worry again.
+        </p>
+
+        <p>
+          Visit us once and you'll know why thousands of people recommend <span class="highlight">Shahid Electronic</span> on WhatsApp, Google, and social media.
+        </p>
+        <a href="contact.html" class="btn">📅 Book a Repair Now</a>
+      </div>
+
+      <div class="about-image">
+        <img src="https://avatars.mds.yandex.net/i?id=fd50f9dae594741034059ba6a1c56fb179b37ffd-5340768-images-thumbs&n=13" alt="Electronic Repair">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

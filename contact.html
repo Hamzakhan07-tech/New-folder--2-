@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Shahid Electronic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d1b2a;
+      color: white;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: #00b4d8;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #1b263b;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 180, 216, 0.2);
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      border: 2px solid #00b4d8;
+      border-radius: 8px;
+      color: rgb(29, 207, 53);
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 15px;
+      top: 13px;
+      background: #1b263b;
+      color: #00b4d8;
+      padding: 0 5px;
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.3s ease all;
+    }
+
+    .form-group input:focus + label,
+    .form-group textarea:focus + label,
+    .form-group select:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:not(:placeholder-shown) + label,
+    .form-group select:valid + label {
+      top: -10px;
+      left: 12px;
+      font-size: 13px;
+      color: #00b4d8;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      background: #00b4d8;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background: white;
+      color: #00b4d8;
+      box-shadow: 0 0 20px #00b4d8;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h2>Book a Repair – Trusted & Transparent Service</h2>
+
+  <form id="whatsappForm">
+
+    <div class="form-group">
+      <input type="text" id="name" name="name" required placeholder=" " />
+      <label for="name">Your Name</label>
+    </div>
+
+    <div class="form-group">
+      <input type="tel" id="phone" name="phone" required placeholder=" " />
+      <label for="phone">Phone Number</label>
+    </div>
+
+    <div class="form-group">
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select Service</option>
+        <option value="LED / LCD Repair">LED / LCD Repair</option>
+        <option value="Microwave Repair">Microwave Repair</option>
+        <option value="UPS / Inverter Repair">UPS / Inverter Service</option>
+        <option value="Stabilizer Repair">Stabilizer Repair</option>
+        <option value="Other">Other</option>
+      </select>
+      <label for="service">Service Type</label>
+    </div>
+
+    <div class="form-group">
+      <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+      <label for="message">Brief Issue Description</label>
+    </div>
+
+    <button type="submit">Submit via WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Shahid Electronic. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !service || !message) {
+      alert('Please fill all fields.');
+      return;
+    }
+
+    const fullMessage =
+      `New Repair Request – Shahid Electronic` +  
+
+      `Name: ${name}` +
+
+      `Phone: ${phone}` +
+
+      `Service Required: ${service}` +
+
+      `Problem Description: ${message}` +
+
+      `Requested via Website Contact Form` +
+      
+      ` Transparent & Honest Repair Guarantee`;
+
+    const whatsappURL = `https://wa.me/923215242091?text=${encodeURIComponent(fullMessage)}`;
+
+    window.open(whatsappURL, '_blank');
+    alert('Request sent successfully. Opening WhatsApp...');
+    document.getElementById('whatsappForm').reset();
+  });
+</script>
+
+</body>
+</html>
